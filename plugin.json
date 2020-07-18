@@ -1,0 +1,8 @@
+{
+    "name": "Camera memory",
+    "author": "FlyingSamson",
+    "version": "1.0.0",
+    "description": "Adds a memory for user defined camera perspectives",
+    "api": "7.2.0",
+    "i18n-catalog": "cura"
+}
