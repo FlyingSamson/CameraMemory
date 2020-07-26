@@ -22,10 +22,10 @@ class CameraMemory(Extension, QObject):
     Extension.__init__(self)
     QObject.__init__(self)
     self._scene = Application.getInstance().getController().getScene()
-    self._CTRL = QtCore.Qt.ControlModifier if platform.system() == "Darwin" \
+    self._CTRL = QtCore.Qt.MetaModifier if platform.system() == "Darwin" \
                                         else QtCore.Qt.ControlModifier
-    self._SAVE_MODIFIER = self._CTRL | QtCore.Qt.AltModifier
-    self._RESTORE_MODIFIER = self._CTRL
+    self._SAVE_MODIFIER = self._CTRL
+    self._RESTORE_MODIFIER = QtCore.Qt.NoModifier
     self._cameraTrafos = [None] * 10
     self._readTrafosFromJson()
 
